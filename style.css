@@ -1,0 +1,165 @@
+h1 {
+	text-align: center;
+}
+
+.head_top, .head_bottom, .left_arm, .right_arm, .torso, .ass, .foot {
+	background-color: #2B7F99;
+}
+
+.dot_one, .dot_two {
+	background-color: #992B34;
+}
+
+.head_top {
+	width: 200px;
+	height: 150px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border-radius: 100px 100px 0 0;
+}
+
+.eyes {
+	display: flex;
+}
+
+.left_eye, .right_eye {
+	background-color: white;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	
+
+}
+
+.left_eye {
+	position: relative;
+	top: 100px; 
+	left: 120px; 
+	
+}
+
+.right_eye {
+	position: relative;
+	top: 100px; 
+	left: 50px; 
+	animation-name: eyeBlink;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.head_bottom {
+	width: 150px;
+	height: 80px;
+	margin: 0 auto;
+	border-radius: 0 0 100px 100px;
+}
+
+.upper_body {
+	width: 300px;
+	height: 250px;
+	margin: 0 auto;
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.left_arm, .right_arm {
+	width: 50px;	
+	height: 200px;
+	border-radius: 100px;
+	margin-top: 30px;
+
+}
+
+.left_arm {
+	margin-right: 10px;
+	
+}
+.right_arm {
+	margin-left: 10px;
+	animation-name: armWave;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+.torso {
+	width: 200px;	
+	height: 280px;
+	border-radius: 50px 50px 0 0;
+}
+
+.heart {
+	color: #992B34;
+	font-size: 90px;
+	position: relative;
+	top: 15px; 
+	left: 50px; 
+	animation-name: heartMove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+.lower_body {
+	
+	width: auto;
+	height: 200px;
+	margin: 0 auto;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	align-content: center;
+	margin-top: 40px;
+	}
+
+.ass{
+	width: 80px;
+	height: 60px;
+	border-radius: 0 0 25px 25px;
+	/*margin-bottom: 5px;*/
+}
+
+.dot_one, .dot_two {
+	width: 30px;
+	height: 30px;
+	border-radius: 25px;
+	/*margin: 5px;*/
+
+}
+
+.foot {
+	width: 60px;
+	height: 40px;
+	border-radius: 25px 25px 0 0;
+	/*margin-bottom: 5px;*/
+}
+
+/* The animation code */
+@keyframes heartMove {
+    0%   {font-size:90px;;}
+    25%  {font-size:95px;}
+    50%  {font-size:90px;}
+    75%  {font-size:95px;}
+    100% {font-size:91px;}
+}
+
+@keyframes armWave {
+	0%   {transform: rotate(-80deg); transform-origin: top left;}
+    25%  {transform: rotate(-160deg); transform-origin: top left;}
+    50%  {transform: rotate(-130deg); transform-origin: top left;}
+    75%  {transform: rotate(-160deg); transform-origin: top left;}
+    85% {transform: rotate(-130deg); transform-origin: top left;}
+    100% {transform: rotate(0deg); transform-origin: top left;}
+
+}
+
+@keyframes eyeBlink {
+    0%   {height: 20px; border-radius: 20px; top: 100px;}
+    50%  {height: 5px; border-radius: 20px; top: 110px;}
+    100% {height: 20px; border-radius: 20px; top: 100px;} 
+}
+
+
